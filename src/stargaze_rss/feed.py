@@ -53,7 +53,15 @@ def fetch_items(url: str) -> List[Dict]:
       downstream backfill step can fetch full article content consistently.
     """
     timeout = httpx.Timeout(connect=10.0, read=30.0, write=None, pool=None)
-    with httpx.Client(timeout=timeout, follow_redirects=True) as client:
+    ua = (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/120.0.0.0 Safari/537.36"
+    )
+    headers = {
+        "User-Agent": ua
+    }
+    with httpx.Client(timeout=timeout, follow_redirects=True, headers=headers) as client:
         r = client.get(url)
         r.raise_for_status()
 
