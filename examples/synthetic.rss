@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+<title>Fictional bulletin</title><link>https://example.org/</link>
+<description>Synthetic data for the demo</description>
+<item><title>Harbor opens second terminal</title>
+<link>https://example.org/harbor</link>
+<description>&lt;p&gt;A fictional harbor added a second terminal this morning.&lt;/p&gt;</description>
+</item>
+<item><title>Harbor opens second terminal</title>
+<link>https://example.net/harbor</link><description>Another illustrative source.</description>
+</item>
+<item><title>Weather station begins annual survey</title>
+<link>https://example.org/weather</link><description>An unrelated synthetic report.</description>
+</item>
+</channel></rss>
